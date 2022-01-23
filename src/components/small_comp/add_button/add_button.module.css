@@ -1,0 +1,8 @@
+@value makerGreen from '../../../common/colors.css';
+
+.add_button {
+	flex: 1 1 50%;
+	background-color: makerGreen;
+	color: white;
+	font-weight: 400;
+}

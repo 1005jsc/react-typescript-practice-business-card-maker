@@ -1,0 +1,35 @@
+@value makerGreen from '../../common/colors.css';
+
+.login_container {
+	width: 40vw;
+	height: 30vw;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title_container {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+}
+
+.login {
+	color: black;
+	font-size: 3vh;
+}
+
+.button {
+	width: 90%;
+	height: 4.3vh;
+	border: 2px solid makerGreen;
+	border-radius: 1.7vh;
+	margin-bottom: 0.6vh;
+	background-color: white;
+}

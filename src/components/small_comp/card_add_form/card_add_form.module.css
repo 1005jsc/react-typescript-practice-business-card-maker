@@ -1,0 +1,38 @@
+.card_add_form_container {
+	width: 92%;
+	height: 16vh;
+	border: 1px solid black;
+	border-right: 0;
+	margin-bottom: 1.3vh;
+}
+
+.card_add_form {
+}
+
+.input_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.input,
+.select,
+.textarea {
+	border: 0;
+	padding: 0;
+	width: 100%;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	/* 이걸 하면 일단 자기줄에 width 100%를 차지함  */
+}
+
+.input,
+.select {
+	flex: 1 1 30%;
+	height: 3vh;
+}
+
+/* .button_container {
+	border-right: 1px solid black;
+	width: 100%;
+  
+} */
