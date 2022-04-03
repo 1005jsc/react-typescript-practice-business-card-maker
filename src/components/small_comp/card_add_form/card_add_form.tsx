@@ -4,20 +4,22 @@ import AddButton from '../add_button/add_button';
 import styles from "./card_add_form.module.css";
 
 type CardAddFormProps = {
-  writeDataToDB: (inputData:inputData) => void
+  updateDataToDB: (inputData:TypeOfCard) => void
 }
 
-export type inputData = {
+export type TypeOfCard = {
+  [index:string]:string|null|number
   name: string|null,
     company: string|null,
     theme: string|null,
     job: string|null,
     email: string|null,
     message: string|null,
+    id: number;
 } 
 
 
-const CardAddForm = ({writeDataToDB}:CardAddFormProps) => {
+const CardAddForm = ({updateDataToDB}:CardAddFormProps) => {
 
   const inputNameRef = useRef<HTMLInputElement | null>(null)
   const inputCompanyRef = useRef<HTMLInputElement | null>(null)
@@ -80,12 +82,13 @@ const CardAddForm = ({writeDataToDB}:CardAddFormProps) => {
     if(inputMessageRef.current){
       inputMessageValue = inputMessageRef.current.value
     }else{
-      inputMessageValue = null
+      inputMessageValue = 'hi'
     }
 
 
-    const inputData:inputData = {
+    const inputData:TypeOfCard = {
             
+    id: Date.now(),
     name: inputNameValue,
     company: inputCompanyValue,
     theme: inputThemeValue,
@@ -94,11 +97,7 @@ const CardAddForm = ({writeDataToDB}:CardAddFormProps) => {
     message: inputMessageValue,
 
   }
-
-    writeDataToDB(inputData)
-
-
-
+    updateDataToDB(inputData)
 
   }
 

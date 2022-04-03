@@ -27,7 +27,7 @@ const Header = ({authService, userName}: HeaderProps) => {
 <div className={styles.title_container}>
   <img className={styles.logo_img} src="/images/logo.png" alt="logo image" />
 
-  <h1 className={styles.header_title}>Business Card Maker</h1>
+  <h1 className={styles.header_title}>Business Card Maker 4</h1>
   {userName&&<h1 className={styles.header_userName}>Hi {userName}</h1>}
 
 </div>
